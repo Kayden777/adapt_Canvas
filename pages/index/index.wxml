@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+<button bindtap="showModal">生成canvas</button>
+<view class='index'>
+  <!-- 公用canvas share -->
+  <import src="../common/canvasShare.wxml" />
+  <template data="{{shareCanvasItem}}" is="canvas-share" />
+<!-- 要绘制到画布上的图片content begin -->
+<image  mode="aspectFit" bindload="imgWH" src="{{huabaoImage1}}" ></image>
+  <!-- 页面显示，试例作用，用作对比 -->
+  <view style="color:black;">{{huabaoText}}</view>
+  <view style="color:black;">{{huabaoZhuTi}}</view>
+  <view style="color:black;">{{huabaoBiaoQian}}</view>
+<view style="display: none;">
+    <!-- <image  mode="aspectFit" bindload="imgWH" src="{{huabaoImage1}}" ></image> -->
+    <image  mode="aspectFit" bindload="imgWH2" src="{{huabaoImage2}}" ></image>
+    <image  mode="aspectFit" bindload="imgWH3" src="{{huabaoImage3}}" ></image>
+    <image  mode="aspectFit" bindload="imgWH4" src="{{huabaoImage4}}" ></image>
+</view>
+<!-- content end --> 
+</view>
+
+<!-- wxml遮盖层同时底部弹框 -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+  <image wx:if="{{url}}"  bindtap="hideModal"  class='shareImg' mode="aspectFit" src='{{url}}'></image>
+  <!-- 黑色背景 -->
+  <view class="modals-cancel" bindtap="hideModal"></view>
+</view>
+

@@ -1,0 +1,23 @@
+.index {
+  margin-top: 50rpx;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* 脏脏修改 */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*垂直居中*//* justify-content: center; 水平居中 */
+  box-sizing: border-box;
+}
+
+/* 包裹画布图片的模态框 */
+.modals{position:fixed; z-index: 999; top:0; left: 0; right:0; bottom: 0;display: flex;justify-content: center;align-items: center;}
+.modals-cancel{position:absolute; z-index:1000; top:0; left: 0; right:0; bottom: 0; background-color: rgba(0,0,0,.5);}
+
+/* 图片样式 */
+.shareImg {
+  height: 80%;
+  z-index: 1008;
+}
